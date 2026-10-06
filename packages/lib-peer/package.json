@@ -1,0 +1,27 @@
+{
+  "name": "@repro/lib-peer",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "typings": "./src/index.ts",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "devDependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "tsc -p . --declaration false"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "*"
+  }
+}

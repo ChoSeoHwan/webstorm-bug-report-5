@@ -1,0 +1,21 @@
+{
+  "name": "@repro/app",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "scripts": {
+    "check": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@repro/lib-peer": "workspace:^",
+    "@repro/lib-relative": "workspace:^",
+    "@repro/lib-subpath": "workspace:^",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

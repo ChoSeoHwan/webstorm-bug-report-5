@@ -1,0 +1,23 @@
+{
+  "name": "@repro/lib-subpath",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "typings": "./src/index.ts",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "tsc -p . --declaration false"
+  }
+}

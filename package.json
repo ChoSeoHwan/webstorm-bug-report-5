@@ -1,0 +1,16 @@
+{
+  "name": "webstorm-pnp-repro",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@4.18.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "check": "yarn workspace @repro/app run check",
+    "build": "yarn workspaces foreach -A --exclude @repro/app run build"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
